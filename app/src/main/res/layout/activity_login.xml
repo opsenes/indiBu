@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/space_large"
+        android:paddingRight="@dimen/space_large"
+        android:paddingTop="@dimen/space_xxlarge"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/activity_login_imageview_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/space_xxxlarge"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/space_large"
+            android:src="@mipmap/logo"
+            tools:ignore="ContentDescription" />
+        <!--  Email Label -->
+
+        <EditText
+            android:id="@+id/activity_login_edittext_input_email"
+            style="@style/HintTextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="@dimen/space_mini"
+            android:layout_marginTop="@dimen/space_mini"
+            android:background="@drawable/rounded_edittext"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"/>
+
+
+        <EditText
+            android:id="@+id/activity_login_edittext_password"
+            style="@style/HintTextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="@dimen/space_mini"
+            android:layout_marginTop="@dimen/space_default"
+            android:background="@drawable/rounded_edittext"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/activity_login_button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_large"
+            android:layout_marginTop="@dimen/space_large"
+            android:background="@drawable/rounded_buttton"
+            android:fontFamily="helvetica"
+            android:padding="@dimen/space_small"
+            android:text="@string/btn_login"
+            android:textAllCaps="false"
+            android:textColor="@color/beyaz"
+            android:theme="@style/ButtonText" />
+
+        <TextView
+            android:id="@+id/activity_login_textview_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space_large"
+            android:gravity="center"
+            android:text="@string/create_account"
+            android:textColor="@color/beyaz"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

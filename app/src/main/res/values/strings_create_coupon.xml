@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="create_coupon_title">Kupon Oluştur</string>
+
+    <string name="create_coupon_title_hint">Kupon Başlığı</string>
+    <string name="create_coupon_description">Kupon İçeriği</string>
+    <string name="create_coupon_price">Kupon ücreti: </string>
+    <string name="create_coupon_button">Kupon Oluştur</string>
+    <string name="create_coupon_currency">₺</string>
+    <string name="create_coupon_price_hint">0</string>
+</resources>

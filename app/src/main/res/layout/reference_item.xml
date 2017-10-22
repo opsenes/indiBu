@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="referenceVM"
+            type="com.internship.mts.internproject.viewmodel.ReferenceViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/reference_item_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="@color/beyaz">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/reference_item_simple_drawee_view_profile_picture"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                app:imageUrl="@{referenceVM.photoUrl}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                fresco:failureImage="@drawable/bart"
+                fresco:placeholderImage="@drawable/bart"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="1dp" />
+
+            <TextView
+                android:id="@+id/reference_item_text_view_nickname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@{referenceVM.nickname}"
+                android:textStyle="bold"
+                android:textColor="@color/beyaz"
+                app:layout_constraintLeft_toRightOf="@+id/reference_item_simple_drawee_view_profile_picture"
+                app:layout_constraintTop_toTopOf="@+id/reference_item_simple_drawee_view_profile_picture" />
+
+            <RatingBar
+                android:id="@+id/reference_item_rating_bar_rate"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="@{referenceVM.starRating}"
+                android:stepSize="0.01"
+                app:layout_constraintHorizontal_bias="0.906"
+                app:layout_constraintLeft_toRightOf="@+id/reference_item_text_view_nickname"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/reference_item_simple_drawee_view_profile_picture" />
+
+            <TextView
+                android:id="@+id/comment_item_text_view_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{referenceVM.comment}"
+                app:layout_constraintBottom_toBottomOf="@+id/reference_item_simple_drawee_view_profile_picture"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/reference_item_simple_drawee_view_profile_picture"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reference_item_text_view_nickname"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/reference_item_text_view_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:text="@{referenceVM.referenceDate}"
+                android:textSize="12sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reference_item_simple_drawee_view_profile_picture" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

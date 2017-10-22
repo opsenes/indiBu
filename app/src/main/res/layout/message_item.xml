@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="messageVM"
+            type="com.internship.mts.internproject.viewmodel.MessageViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/message_item_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_small"
+        android:layout_marginRight="@dimen/space_small"
+        android:layout_marginTop="@dimen/space_small"
+        app:cardCornerRadius="@dimen/space_mini"
+        app:cardElevation="@dimen/space_mini">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/message_item_text_view_nickname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@{messageVM.nickname}"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/space_default"
+                android:layout_marginTop="@dimen/space_small" />
+
+            <TextView
+                android:id="@+id/message_item_text_view_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/space_small"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:text="@{messageVM.messageDate}"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/message_item_text_view_message_body"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+            <TextView
+                android:id="@+id/message_item_text_view_message_body"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{messageVM.messageBody}"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginTop="@dimen/space_small"
+                android:layout_marginStart="@dimen/space_default"
+                android:layout_marginEnd="@dimen/space_default"
+                app:layout_constraintTop_toBottomOf="@+id/message_item_text_view_nickname" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

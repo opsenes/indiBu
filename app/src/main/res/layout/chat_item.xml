@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="chatVM"
+            type="com.internship.mts.internproject.viewmodel.ChatViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/chat_item_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_small"
+        android:layout_marginRight="@dimen/space_small"
+        android:layout_marginTop="@dimen/space_small"
+        app:cardCornerRadius="@dimen/space_mini"
+        app:cardElevation="@dimen/space_mini">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/chat_item_simpledraweeview_photo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:imageUrl="@{chatVM.photoUrl}"
+                android:layout_marginBottom="@dimen/space_small"
+                android:layout_marginEnd="@dimen/space_default"
+                android:layout_marginStart="@dimen/space_default"
+                android:layout_marginTop="@dimen/space_small"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                fresco:placeholderImage="@drawable/bart"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="1dp" />
+
+            <TextView
+                android:id="@+id/chat_item_text_view_nickname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="@{chatVM.nickname}"
+                android:layout_marginBottom="@dimen/space_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="@+id/chat_item_simpledraweeview_photo"
+                app:layout_constraintLeft_toLeftOf="@+id/chat_item_simpledraweeview_photo"
+                app:layout_constraintHorizontal_bias="1.0"
+                android:layout_marginTop="@dimen/space_mini"
+                app:layout_constraintTop_toBottomOf="@+id/chat_item_simpledraweeview_photo" />
+
+            <TextView
+                android:id="@+id/chat_item_text_view_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_small"
+                android:layout_marginBottom="@dimen/space_small"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:text="@{chatVM.chatDate}"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintLeft_toRightOf="@+id/chat_item_text_view_nickname"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/chat_item_text_view_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{chatVM.title}"
+                android:ellipsize="end"
+                android:maxLines="2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/chat_item_simpledraweeview_photo"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:layout_marginTop="@dimen/space_default"
+                android:layout_marginEnd="@dimen/space_default"
+                android:layout_marginBottom="@dimen/space_default"
+                android:layout_marginStart="@dimen/space_default" />
+
+            <TextView
+                android:id="@+id/chat_item_text_view_last_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{chatVM.messageBody}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/chat_item_simpledraweeview_photo"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chat_item_text_view_title"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_marginTop="@dimen/space_mini"
+                android:layout_marginEnd="@dimen/space_default"
+                android:layout_marginBottom="@dimen/space_default"
+                android:layout_marginStart="@dimen/space_default" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

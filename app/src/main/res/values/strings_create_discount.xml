@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!---Create Discount Strings-->
+    <string name="create_discount_title">Fırsat Oluştur</string>
+
+    <string name="discount_title_hint">Fırsat Başlığı</string>
+    <string name="discount_description">Fırsat İçeriği</string>
+    <string name="discount_photo">Fotoğraf Yükle</string>
+    <string name="discount_button">Fırsat Oluştur</string>
+    <string name="discount_location">Fırsat Konumu İşaretle</string>
+    <string name="discount_location_general">Tüm Türkiye</string>
+    <string name="create_discount_category_prompt">Kategori Seçin</string>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="primary">#E43F3F</color>
+    <color name="primary_dark">#E12929</color>
+    <color name="primary_darker">#CC1D1D</color>
+    <color name="accent">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="sarimsi">#FCEAC1</color>
+    <color name="gri_calan_mavi">#CED6E2</color>
+    <color name="toz_pembe">#F5C2D8</color>
+    <color name="mavimsi">#7DACEB</color>
+    <color name="beyaz">#FCFCFE</color>
+    <color name="hot_pink">#FF69B4</color>
+    <color name="kavunici">#FFB74D</color>
+    <color name="transperant">#00000000</color>
+    <color name="orange">#FD9226</color>
+    <color name="light_purple">#BF6ED4</color>
+    <color name="dark_purple">#4D37B2</color>
+    <color name="purple_main2">#7e57c2</color>
+    <color name="purple_main3">#9C27B0</color>
+
+
+    <color name="half_black">#808080</color>
+    <color name="darker_white">#fafafa</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="black_semi_transparent">#B2000000</color>
+</resources>

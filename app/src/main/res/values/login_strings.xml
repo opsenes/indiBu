@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    
+    <string name="password">Şifre Girin</string>
+    <string name="email">Email veya Kullanıcı Adı Girin</string>
+    <string name="btn_login">Giriş yapın</string>
+    <string name="create_account">Daha üye değil misiniz? Yeni hesap oluşturun</string>
+
+</resources>

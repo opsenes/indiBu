@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="signin">Zaten üye misiniz? Üye girişi yapın</string>
+    <string name="hint_username">Kullanıcı ismi</string>
+    <string name="hint_firstname">İsiminiz</string>
+    <string name="hint_lastname">Soy İsminiz</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Şifre</string>
+    <string name="hint_password2">Şifre (Tekrar)</string>
+    <string name="interest_signup">İlgi alanları:</string>
+    <string name="category_prompt">Seçin</string>
+    <string name="create_account_button">Kayıt olun</string>
+    <string name="err_login_failed">İşlem tamamlanamıyor</string>
+</resources>

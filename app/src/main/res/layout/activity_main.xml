@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup_txt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/profile_page_btn" />
+
+    <Button
+        android:id="@+id/profile_page_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_txt"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="217dp" />
+
+    <Button
+        android:id="@+id/deal_detail_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="detaya git"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintVertical_bias="0.048"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/profile_page_btn" />
+
+    <Button
+        android:id="@+id/coupon_detail_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kupon detaya git"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintVertical_bias="0.048"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/deal_detail_btn" />
+
+    <Button
+        android:id="@+id/create_deal_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="indirim oluştur"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/coupon_detail_btn" />
+
+    <Button
+        android:id="@+id/create_coupon_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kupon oluştur"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/create_deal_btn" />
+
+    <Button
+        android:id="@+id/homepage_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/homepage_txt"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        android:layout_marginTop="21dp"
+        app:layout_constraintTop_toBottomOf="@+id/create_coupon_btn" />
+
+</android.support.constraint.ConstraintLayout>

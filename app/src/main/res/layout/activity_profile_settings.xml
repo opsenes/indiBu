@@ -1,0 +1,196 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/tools"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/profile_settings_activity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/space_default"
+            android:paddingRight="@dimen/space_default"
+            android:paddingTop="@dimen/space_default"
+            android:weightSum="1"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/activity_profile_settings_simpledraweeview_profile_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                fresco:placeholderImage="@drawable/bart"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="1dp" />
+
+            <TextView
+                android:id="@+id/activity_profile_settings_textview_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/space_small"
+                android:layout_marginLeft="@dimen/space_small"
+                android:layout_marginRight="@dimen/space_small"
+                android:layout_marginStart="@dimen/space_small"
+                android:layout_marginTop="@dimen/space_small"
+                android:textColor="@color/dark_purple"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/activity_profile_settings_textview_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/space_small"
+                android:layout_marginLeft="@dimen/space_small"
+                android:layout_marginRight="@dimen/space_small"
+                android:layout_marginStart="@dimen/space_small"
+                android:textColor="@color/dark_purple"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/activity_profile_settings_textview_name_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_small"
+                android:layout_marginStart="@dimen/space_mini"
+                android:layout_marginTop="@dimen/space_small"
+                android:text="@string/profile_settings_textview_name_change"
+                android:textColor="@color/dark_purple"
+                android:textSize="18sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/activity_profile_settings_textinputlayout_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/profile_settings">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activity_profile_settings_textinputedittext_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profile_settings_hint_first_name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/activity_profile_settings_textinputlayout_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/profile_settings">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activity_profile_settings_textinputedittext_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profile_settings_hint_last_name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/activity_profile_settings_textview_interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_small"
+                android:layout_marginStart="@dimen/space_mini"
+                android:layout_marginTop="@dimen/space_small"
+                android:text="@string/profile_settings_textview_interests"
+                android:textColor="@color/dark_purple"
+                android:textSize="18sp" />
+
+            <com.thomashaertel.widget.MultiSpinner
+                android:id="@+id/activity_profile_settings_multispinner_interest_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_mini"
+                android:layout_marginTop="@dimen/space_default"
+                android:hint="@string/profile_settings_category_prompt"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/activity_profile_settings_textview_change_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_small"
+                android:layout_marginStart="@dimen/space_mini"
+                android:layout_marginTop="@dimen/space_default"
+                android:text="@string/profile_settings_textview_password"
+                android:textColor="@color/dark_purple"
+                android:textSize="18sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/activity_profile_settings_textinputlayout_oldpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/profile_settings">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activity_profile_settings_textinputedittext_oldpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profile_settings_hint_oldpassword"
+                    android:inputType="textPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/activity_profile_settings_textinputlayout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/profile_settings">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activity_profile_settings_textinputedittext_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profile_settings_hint_password"
+                    android:inputType="textPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/activity_profile_settings_textinputlayout_repassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/profile_settings">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/activity_profile_settings_textinputedittext_repassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profile_settings_hint_repassword"
+                    android:inputType="textPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/activity_profile_settings_button_user_update"
+                style="@style/ButtonText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_default"
+                android:layout_marginTop="@dimen/space_default"
+                android:background="@drawable/rounded_buttton"
+                android:text="@string/profile_settings_btn_update"
+                android:textAllCaps="false"
+                android:textColor="@color/beyaz" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

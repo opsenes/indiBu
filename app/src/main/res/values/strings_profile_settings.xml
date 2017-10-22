@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="profile_settings_title">Profil Ayarlarım</string>
+
+    <string name="profile_settings_hint_first_name">İsim</string>
+    <string name="profile_settings_hint_last_name">Soyisim</string>
+    <string name="profile_settings_hint_email">Email</string>
+    <string name="profile_settings_hint_oldpassword">Eski şifreniz</string>
+    <string name="profile_settings_hint_password">Yeni Şifre</string>
+    <string name="profile_settings_hint_repassword">Şifre\'yi tekrar girin</string>
+
+    <string name="profile_settings_category_prompt">Seçin.</string>
+    <string name="profile_settings_btn_update">Güncelle</string>
+
+    <string name="profile_settings_textview_name_change">İsim Değiştir: </string>
+    <string name="profile_settings_textview_interests">İlgi Alanları Değiştir: </string>
+    <string name="profile_settings_textview_password">Şifre Değiştir: </string>
+
+</resources>

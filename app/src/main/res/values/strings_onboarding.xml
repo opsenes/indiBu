@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_share">İndirimleri çevrenizdeki insanlarla paylaşın</string>
+    <string name="onboarding_follow">İndirimleri ve kuponları takip edip fırsatları kaçırmayın</string>
+    <string name="onboarding_sell">Alışveriş kuponlarınızı hızlıca elden çıkarın</string>
+    <string name="onboarding_skip">Geç</string>
+    <string name="onboarding_signup">Hesap Aç</string>
+    <string name="launch_screen_message">Sıcak fırsatların adresi</string>
+</resources>

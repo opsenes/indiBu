@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="categories">
+        <item>Elektronik</item>
+        <item>Kozmetik</item>
+        <item>Giyim</item>
+        <item>Gıda</item>
+    </string-array>
+
+    <string-array name="categories_CAP">
+        <item>ELECTRONICS</item>
+        <item>COSMETICS</item>
+        <item>CLOTHING</item>
+        <item>FOOD</item>
+    </string-array>
+
+</resources>

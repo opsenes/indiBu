@@ -1,0 +1,186 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/space_default"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/space_default"
+            android:paddingRight="@dimen/space_default"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/signup_activity_imageview_pp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                fresco:placeholderImage="@drawable/bee"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="1dp" />
+
+            <TextView
+                android:id="@+id/signup_activity_textview_signin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_small"
+                android:layout_marginTop="@dimen/space_small"
+                android:gravity="center"
+                android:text="@string/signin"
+                android:textColor="@color/beyaz"
+                android:textSize="@dimen/space_default" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_activity_layout_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_mini"
+                android:theme="@style/TextInput">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/signup_activity_edittext_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_username"
+                    android:textColor="@color/beyaz"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_activity_layout_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_mini"
+                android:theme="@style/TextInput">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/signup_activity_edittext_firstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_firstname"
+                    android:textColor="@color/beyaz" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_activity_layout_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_mini"
+                android:theme="@style/TextInput">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/signup_activity_edittext_lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_lastname"
+                    android:textColor="@color/beyaz"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_activity_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_mini"
+                android:theme="@style/TextInput">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/signup_activity_edittext_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_email"
+                    android:textColor="@color/beyaz"
+                    android:inputType="textEmailAddress" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_activity_layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_mini"
+                android:theme="@style/TextInput">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/signup_activity_edittext_password"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/beyaz"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_activity_layout_password_reenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_mini"
+                android:theme="@style/TextInput">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/signup_activity_edittext_password_reenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_password2"
+                    android:textColor="@color/beyaz"
+                    android:inputType="textPassword" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/signup_activity_textview_interes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/interest_signup"
+                    android:textColor="@color/beyaz"
+                    android:textSize="18sp" />
+
+                <com.thomashaertel.widget.MultiSpinner
+                    android:id="@+id/signup_activity_spinner_interest_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/space_mini"
+                    android:layout_weight="100"
+                    android:hint="@string/category_prompt"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/beyaz"
+                    android:textColorHint="@color/beyaz"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/signup_activity_button_signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_default"
+                android:layout_marginTop="@dimen/space_large"
+                android:background="@drawable/rounded_buttton"
+                android:padding="@dimen/space_small"
+                android:text="@string/create_account_button"
+                android:textAllCaps="false"
+                android:textColor="@color/beyaz"
+                android:theme="@style/ButtonText" />
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</ScrollView>

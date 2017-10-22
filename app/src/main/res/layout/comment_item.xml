@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="commentVM"
+            type="com.internship.mts.internproject.viewmodel.CommentViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/comment_item_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_small"
+        android:layout_marginRight="@dimen/space_small"
+        android:layout_marginTop="@dimen/space_small"
+        app:cardCornerRadius="@dimen/space_mini"
+        app:cardElevation="@dimen/space_mini">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/activity_profile_page_simpledraweeview_photo"
+                app:imageUrl="@{commentVM.photoUrl}"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="@dimen/space_small"
+                android:layout_marginEnd="@dimen/space_default"
+                android:layout_marginStart="@dimen/space_default"
+                android:layout_marginTop="@dimen/space_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                fresco:placeholderImage="@drawable/bart"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="1dp" />
+
+            <TextView
+                android:id="@+id/comment_item_text_view_nickname"
+                android:text="@{commentVM.nickname}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_default"
+                android:layout_marginTop="@dimen/space_small"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/activity_profile_page_simpledraweeview_photo"
+                app:layout_constraintTop_toTopOf="@+id/activity_profile_page_simpledraweeview_photo" />
+
+            <TextView
+                android:id="@+id/comment_item_text_view_date"
+                android:text="@{commentVM.commentDate}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_default"
+                android:layout_marginTop="@dimen/space_small"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toRightOf="@+id/comment_item_text_view_nickname"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/activity_profile_page_simpledraweeview_photo" />
+
+            <TextView
+                android:id="@+id/comment_item_text_view_text"
+                android:text="@{commentVM.commentText}"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/space_small"
+                android:layout_marginLeft="@dimen/space_default"
+                android:layout_marginRight="@dimen/space_default"
+                android:layout_marginTop="@dimen/space_mini"
+                android:ellipsize="end"
+                android:maxLines="2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toRightOf="@+id/activity_profile_page_simpledraweeview_photo"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comment_item_text_view_nickname" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

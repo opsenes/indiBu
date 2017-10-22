@@ -1,0 +1,180 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/profile_page_activity_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/space_default"
+            android:paddingRight="@dimen/space_default"
+            android:weightSum="1">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space_small">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/activity_profile_page_simpledraweeview_profile_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/space_small"
+                    android:layout_marginLeft="@dimen/space_small"
+                    android:layout_marginRight="@dimen/space_small"
+                    android:layout_marginStart="@dimen/space_small"
+                    android:layout_marginTop="@dimen/space_small"
+                    fresco:layout_constraintLeft_toLeftOf="parent"
+                    fresco:layout_constraintRight_toRightOf="parent"
+                    fresco:layout_constraintTop_toTopOf="parent"
+                    fresco:placeholderImage="@drawable/bart"
+                    fresco:roundAsCircle="true"
+                    fresco:roundedCornerRadius="1dp" />
+
+                <TextView
+                    android:id="@+id/activity_profile_page_textview_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_small"
+                    android:layout_marginStart="@dimen/space_small"
+                    android:layout_marginTop="@dimen/space_mini"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    fresco:layout_constraintLeft_toLeftOf="parent"
+                    fresco:layout_constraintRight_toRightOf="parent"
+                    fresco:layout_constraintTop_toBottomOf="@+id/activity_profile_page_simpledraweeview_profile_image" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space_small"
+                    android:layout_marginRight="@dimen/space_small"
+                    android:layout_marginTop="@dimen/space_mini"
+                    android:orientation="vertical"
+                    fresco:layout_constraintBottom_toBottomOf="parent"
+                    fresco:layout_constraintLeft_toLeftOf="parent"
+                    fresco:layout_constraintRight_toRightOf="parent"
+                    fresco:layout_constraintTop_toBottomOf="@+id/activity_profile_page_textview_nickname">
+
+                    <RatingBar
+                        android:id="@+id/activity_profile_page_rating_bar_rate"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:stepSize="0.01" />
+
+                    <TextView
+                        android:id="@+id/activity_profile_page_textview_reference"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/activity_profile_page_button_profile_settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_small"
+                    android:layout_marginStart="@dimen/space_small"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:background="@drawable/rounded_edittext_fill_purple"
+                    android:text="@string/profile_page_profile_settings"
+                    android:textAllCaps="false"
+                    android:textColor="@color/beyaz"
+                    android:textSize="20sp"
+                    android:theme="@style/ButtonText"
+                    fresco:layout_constraintHorizontal_bias="0.502"
+                    fresco:layout_constraintLeft_toLeftOf="parent"
+                    fresco:layout_constraintRight_toRightOf="parent"
+                    fresco:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/activity_profile_page_button_posts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/space_small"
+                    android:layout_marginStart="@dimen/space_small"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:background="@drawable/rounded_edittext_fill_purple"
+                    android:text="@string/profile_page_posts"
+                    android:textAllCaps="false"
+                    android:textColor="@color/beyaz"
+                    android:textSize="20sp"
+                    android:theme="@style/ButtonText"
+                    fresco:layout_constraintHorizontal_bias="0.502"
+                    fresco:layout_constraintLeft_toLeftOf="parent"
+                    fresco:layout_constraintRight_toRightOf="parent"
+                    fresco:layout_constraintTop_toBottomOf="@id/activity_profile_page_button_profile_settings" />
+
+                <Button
+                    android:id="@+id/activity_profile_page_button_reference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_small"
+                    android:layout_marginEnd="@dimen/space_small"
+                    android:layout_marginStart="@dimen/space_small"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:background="@drawable/rounded_edittext_fill_purple"
+                    android:text="@string/profile_page_references"
+                    android:textAllCaps="false"
+                    android:textColor="@color/beyaz"
+                    android:textSize="20sp"
+                    android:theme="@style/ButtonText"
+                    fresco:layout_constraintHorizontal_bias="0.502"
+                    fresco:layout_constraintLeft_toLeftOf="parent"
+                    fresco:layout_constraintRight_toRightOf="parent"
+                    fresco:layout_constraintTop_toBottomOf="@+id/activity_profile_page_button_posts" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:id="@+id/activity_profile_page_button_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_default"
+                android:layout_marginEnd="@dimen/space_small"
+                android:layout_marginStart="@dimen/space_small"
+                android:layout_marginTop="@dimen/space_default"
+                android:background="@drawable/rounded_buttton"
+                android:text="@string/profile_page_btn_logout"
+                android:textAllCaps="false"
+                android:textColor="@color/beyaz"
+                android:textSize="20sp"
+                android:theme="@style/ButtonText" />
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</ScrollView>

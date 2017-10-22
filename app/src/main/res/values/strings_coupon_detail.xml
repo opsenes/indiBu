@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="coupon_detail_title">Kupon Detayları</string>
+    <string name="coupon_message_button_text">Mesaj gönder </string>
+    <string name="coupon_price_text">Fiyat: </string>
+    <string name="coupon_currency_text">₺</string>
+    <string name="coupon_detail_activity_reference_bar" formatted="false">%.2f (%d)</string>
+</resources>

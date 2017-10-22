@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dicount_detail_title">Fırsat Detayları</string>
+    <string name="comment_write">Yorum yazın.</string>
+    <string name="discount_detail_activity_reference_bar" formatted="false">%.2f (%d)</string>
+    <string name="discount_detail_location">Harita da bul</string>
+</resources>

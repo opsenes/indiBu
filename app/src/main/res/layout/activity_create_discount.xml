@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:background="?attr/colorPrimary"
+            android:id="@+id/create_discount_activity_toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/space_default"
+            android:paddingRight="@dimen/space_default"
+            android:paddingTop="@dimen/space_xxlarge"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/activity_create_discount_edittext_title"
+                style="@style/HintTextLabel2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/space_mini"
+                android:background="@drawable/rounded_edittext_purple"
+                android:ellipsize="start"
+                android:hint="@string/discount_title_hint"
+                android:inputType="textEmailAddress"
+                android:maxLength="37"
+                android:paddingEnd="@dimen/space_small"
+                android:paddingStart="@dimen/space_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="@dimen/space_small"
+                android:layout_marginTop="@dimen/space_default"
+                android:background="@drawable/rounded_edittext_purple">
+
+                <com.thomashaertel.widget.MultiSpinner
+                    android:id="@+id/activity_create_discount_spinner_category"
+                    style="@style/SpinnerText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:entries="@array/categories"
+                    android:hint="@string/create_discount_category_prompt"
+                    android:paddingLeft="@dimen/space_small" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/activity_create_discount_edittext_description"
+                style="@style/HintTextLabel2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="@dimen/space_mini"
+                android:layout_marginTop="@dimen/space_default"
+                android:background="@drawable/rounded_edittext_purple"
+                android:ellipsize="start"
+                android:gravity="top|left"
+                android:hint="@string/discount_description"
+                android:inputType="textMultiLine"
+                android:maxLength="250"
+                android:padding="@dimen/space_small" />
+
+            <TextView
+                android:id="@+id/activity_create_discount_textview_photo"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_small"
+                android:layout_marginStart="@dimen/space_mini"
+                android:layout_marginTop="@dimen/space_small"
+                android:drawableLeft="@drawable/ic_menu_camera"
+                android:drawablePadding="@dimen/space_mini"
+                android:gravity="center_vertical"
+                android:text="@string/discount_photo"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/activity_create_discount_textview_location"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space_small"
+                android:layout_marginTop="@dimen/space_small"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawablePadding="-2dp"
+                android:gravity="center_vertical"
+                android:text="@string/discount_location"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/activity_create_discount_google_attributions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:src="@drawable/powered_by_google_light" />
+
+            <CheckBox
+                android:id="@+id/activity_create_discount_checkBox"
+                style="@style/TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_mini"
+                android:text="@string/discount_location_general" />
+
+            <Button
+                android:id="@+id/activity_create_discount_button"
+                style="@style/ButtonText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space_large"
+                android:layout_marginTop="@dimen/space_large"
+                android:background="@drawable/rounded_buttton"
+                android:padding="@dimen/space_small"
+                android:text="@string/discount_button"
+                android:textAllCaps="false"
+                android:textColor="@color/beyaz" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

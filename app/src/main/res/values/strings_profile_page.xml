@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile_page_reference_bar" formatted="false">%.2f (%d)</string>
+    <string name="profile_page_profile_settings">Profil Ayarlarım</string>
+    <string name="profile_page_posts">Yayınladıklarım</string>
+    <string name="profile_page_references">Referanslarım</string>
+    <string name="profile_page_ibans">Banka Hesaplarım</string>
+    <string name="profile_page_btn_logout">Çıkış</string>
+    <string name="profile_page_title">Profilim</string>
+</resources>
